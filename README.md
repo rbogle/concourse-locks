@@ -1,8 +1,10 @@
 # concourse-locks
 
-lock pools for resource locks in concourse
+gate testing branch
 
-- development -- pool for Prod environment
-- staging -- pool for Prod environment
-- production -- pool for Prod environment
-- controller -- pool for pipeline controller
+- child is gate for child pipeline
+- parent is gate for parent pipeline
+
+parent sets and triggers child with child gate
+child runs and sets gate in parent for autoclose
+autoclose triggers parent to continue...
